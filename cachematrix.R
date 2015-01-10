@@ -1,4 +1,4 @@
-##The following two functions work together. The first function takes the inverse of a matrix and caches it. The second function can be used to retrieve the inverse from the cache.
+##The following two functions work together. The first function uses the details of a matrix to store the inverse of the matrix in the cache. The second function can be used to retrieve the inverse from the cache.
 
 ## The makecacheMatrix function:
         ## The makecacheMatrix function creates a special matrix, which is really a list containing a function to:
