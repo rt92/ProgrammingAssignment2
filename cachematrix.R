@@ -2,25 +2,20 @@
 
 ## The makecacheMatrix function:
         ## The makecacheMatrix function creates a special matrix, which is really a list containing a function to:
-        ##1. Set the value of the matrix
-        ##2. Get the value of the matix
-        ##3. Set the value of the inverse
-        ##4. Get the value of the inverse
 
-makecacheMatrix <- function(x = matrix()) {
+makecacheMatrix <- function(x = matrix()) { ##1. Get the value of the matix
         m <- NULL
-        setmatrix <- function(y) {
+        setmatrix <- function(y) { ##2. Set the value of the matrix
                 x <<- y
                 m <<- NULL
         }
         getmatrix <- function() x
-        setinverse <- function(solve) m <<- solve
-        getinverse <- function() m
+        setinverse <- function(solve) m <<- solve  ##3. Set the value of the inverse
+        getinverse <- function() m  ##4. Get the value of the inverse
         list(setmatrix = setmatrix, getmatrix = getmatrix,
              setinverse = setinverse,
              getinverse = getinverse)
 }
-
 
 ## The cachesolve function:
         ## The cachesolve function calculates the inverse of the special matrix created with the makecacheMatrix function above. It first checks if the inverse has already been calculated, and if so, retrieves it from the cache and skips the computation. Otherwise, it calculates the inverse and stores it in the cache using the setinverse function.
